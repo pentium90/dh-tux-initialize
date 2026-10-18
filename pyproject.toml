@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dh-tux-initialize"
+version = "0.1.0"
+description = "Discover and initialize compatible Dahua IP cameras on Linux"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = ["cryptography>=41"]
+
+[project.optional-dependencies]
+build = ["pyinstaller==6.16.0"]
+
+[project.scripts]
+dh-tux-initialize = "dh_tux_initialize.release_cli:main"
+
+[project.urls]
+Repository = "https://github.com/pentium90/dh-tux-initialize"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dh_tux_initialize = ["THIRD_PARTY_NOTICES.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
