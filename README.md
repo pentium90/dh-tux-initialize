@@ -24,7 +24,7 @@ camera discovery observation above.
 
 ## Usage
 
-For a released binary:
+After building from source:
 
 ```bash
 chmod +x dh-tux-initialize
